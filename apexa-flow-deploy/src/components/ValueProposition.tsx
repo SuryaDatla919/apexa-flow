@@ -3,10 +3,6 @@
 import { motion } from "motion/react";
 import { Zap, Clock, Rocket } from "lucide-react";
 
-// Placeholder images - replace with your actual images in production
-const apexLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%234f46e5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237c3aed;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='10' y='40' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='url(%23grad)'%3EApexa Flow%3C/text%3E%3C/svg%3E";
-const integrationsImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%230f0f1a'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='%239ca3af' text-anchor='middle' dominant-baseline='middle'%3EIntegrations Dashboard%3C/text%3E%3C/svg%3E";
-
 export function ValueProposition() {
   const benefits = [
     {
@@ -55,7 +51,7 @@ export function ValueProposition() {
               className="relative"
             >
               <img 
-                src={apexLogo} 
+                src="/apexa-brain-icon.png" 
                 alt="Apexa Flow" 
                 className="w-24 h-24 lg:w-32 lg:h-32 object-contain relative z-10"
                 style={{
