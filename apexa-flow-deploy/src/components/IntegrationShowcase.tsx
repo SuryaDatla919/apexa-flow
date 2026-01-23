@@ -2,9 +2,6 @@
 
 import { motion } from "motion/react";
 
-// Placeholder image - replace with your actual integrations dashboard screenshot
-const integrationsImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%230f0f1a'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='32' fill='%239ca3af' text-anchor='middle' dominant-baseline='middle'%3EIntegrations Dashboard Preview%3C/text%3E%3C/svg%3E";
-
 export function IntegrationShowcase() {
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
@@ -97,7 +94,7 @@ export function IntegrationShowcase() {
             >
               {/* Image */}
               <img 
-                src={integrationsImage} 
+                src="/integrations-dashboard.png" 
                 alt="APEXA AI Integration Hub - Connect with Slack, Gmail, HubSpot, Google Sheets, Salesforce, and more" 
                 className="w-full h-auto object-contain relative z-10"
                 style={{
