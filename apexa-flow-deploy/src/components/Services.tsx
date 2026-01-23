@@ -19,10 +19,6 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
-// Placeholder images - replace with your actual images in production
-const revenueImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%230f0f1a'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' fill='%239ca3af' text-anchor='middle' dominant-baseline='middle'%3ERevenue Analytics%3C/text%3E%3C/svg%3E";
-const growthIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234f46e5'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='16' fill='white' text-anchor='middle' dominant-baseline='middle'%3E📈%3C/text%3E%3C/svg%3E";
-
 export function Services() {
   const services = [
     {
@@ -153,7 +149,7 @@ export function Services() {
               className="relative"
             >
               <img 
-                src={growthIcon} 
+                src="/apexa-growth-icon.png" 
                 alt="Revenue Growth" 
                 className="w-24 h-24 lg:w-32 lg:h-32 object-contain relative z-10"
                 style={{
