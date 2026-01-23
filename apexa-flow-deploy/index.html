@@ -18,12 +18,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Preconnect to Zapier for faster chatbot loading -->
+    <link rel="preconnect" href="https://interfaces.zapier.com" crossorigin>
+    
     <title>Apexa Flow - AI Automation & Website Solutions</title>
+    
+    <!-- Zapier Chatbot Styles - Ensure visibility -->
+    <style>
+      zapier-interfaces-chatbot-embed {
+        position: fixed !important;
+        z-index: 999999 !important;
+        bottom: 20px !important;
+        right: 20px !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmkq3mr85005t850bxrxqa8i8'></zapier-interfaces-chatbot-embed>
+    
+    <!-- Zapier Chatbot - Dynamic loading ensures proper initialization -->
+    <script>
+      (function() {
+        // Wait for DOM to be fully loaded before initializing Zapier chatbot
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initZapierChatbot);
+        } else {
+          initZapierChatbot();
+        }
+        
+        function initZapierChatbot() {
+          // Create and load the Zapier script
+          var zapierScript = document.createElement('script');
+          zapierScript.type = 'module';
+          zapierScript.src = 'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js';
+          zapierScript.crossOrigin = 'anonymous';
+          
+          zapierScript.onload = function() {
+            // Give the custom element time to register
+            setTimeout(function() {
+              // Create the chatbot element if it doesn't exist
+              if (!document.querySelector('zapier-interfaces-chatbot-embed')) {
+                var chatbot = document.createElement('zapier-interfaces-chatbot-embed');
+                chatbot.setAttribute('is-popup', 'true');
+                chatbot.setAttribute('chatbot-id', 'cmkq3mr85005t850bxrxqa8i8');
+                document.body.appendChild(chatbot);
+                console.log('Zapier chatbot initialized successfully');
+              }
+            }, 100);
+          };
+          
+          zapierScript.onerror = function(e) {
+            console.error('Failed to load Zapier chatbot script:', e);
+          };
+          
+          document.head.appendChild(zapierScript);
+        }
+      })();
+    </script>
   </body>
 </html>
