@@ -6,9 +6,6 @@ import { Button } from "./ui/button";
 import { Menu, X, Phone, Mail, Calendar } from "lucide-react";
 import { DemoScheduleModal } from "./DemoScheduleModal";
 
-// Logo placeholder - replace with your actual logo in production
-const apexLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%234f46e5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237c3aed;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='10' y='40' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='url(%23grad)'%3EApexa Flow%3C/text%3E%3C/svg%3E";
-
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,21 +47,16 @@ export function Header() {
             transition={{ duration: 0.2 }}
           >
             <img 
-              src={apexLogo} 
+              src="/apexaflow-logo.png" 
               alt="Apexa Flow" 
-              className="h-32 md:h-48 w-auto object-contain bg-transparent relative z-10"
-              style={{
-                filter: 'drop-shadow(0 0 40px rgba(79, 70, 229, 0.8)) drop-shadow(0 0 80px rgba(147, 51, 234, 0.6)) drop-shadow(0 0 120px rgba(79, 70, 229, 0.4))'
-              }}
+              className="h-12 md:h-16 w-auto object-contain bg-transparent relative z-10"
             />
-            {/* Enhanced glow effect behind logo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#4f46e5] to-[#9333ea] blur-3xl -z-10 scale-150 opacity-70" />
           </motion.a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              
                 key={link.name}
                 href={link.href}
                 className="text-white/80 hover:text-white transition-colors duration-200"
@@ -76,14 +68,14 @@ export function Header() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
+            
               href="tel:+12409071427"
               className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(240) 907-1427</span>
             </a>
-            <a
+            
               href="mailto:contact@apexaflow.com"
               className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
             >
@@ -121,7 +113,7 @@ export function Header() {
           >
             <nav className="flex flex-col gap-4 px-4">
               {navLinks.map((link) => (
-                <a
+                
                   key={link.name}
                   href={link.href}
                   className="text-white/80 hover:text-white transition-colors py-2"
@@ -131,14 +123,14 @@ export function Header() {
                 </a>
               ))}
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
-                <a
+                
                   href="tel:+12409071427"
                   className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>(240) 907-1427</span>
                 </a>
-                <a
+                
                   href="mailto:contact@apexaflow.com"
                   className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
                 >
