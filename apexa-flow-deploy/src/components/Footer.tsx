@@ -15,9 +15,6 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
-// Logo placeholder - replace with your actual logo in production
-const apexLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%234f46e5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237c3aed;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='10' y='40' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='url(%23grad)'%3EApexa Flow%3C/text%3E%3C/svg%3E";
-
 export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -84,9 +81,9 @@ export function Footer() {
             >
               <div className="mb-4">
                 <img 
-                  src={apexLogo} 
+                  src="/apexaflow-logo.png" 
                   alt="Apexa Flow" 
-                  className="h-32 md:h-40 w-auto object-contain bg-transparent"
+                  className="h-12 md:h-16 w-auto object-contain bg-transparent"
                 />
               </div>
               <p className="text-white/70 mb-6 max-w-sm">
@@ -153,7 +150,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a
+                    
                       href={link.href}
                       className="text-sm text-white/60 hover:text-white transition-colors"
                     >
@@ -183,7 +180,7 @@ export function Footer() {
             {socialLinks.map((social) => {
               const Icon = social.icon;
               return (
-                <a
+                
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
